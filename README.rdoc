@@ -1,0 +1,4 @@
+= Sigimera Test Client
+
+This is a test implementation how the Sigimera API (http://www.sigimera.org)
+could be used.
