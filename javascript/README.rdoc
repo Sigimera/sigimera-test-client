@@ -1,0 +1,5 @@
+= JavaScript Client
+
+This section contains example clients written in JavaScript. Please search for
+the string *CHANGEIT* and substitute it with your auth_token (see
+http://www.sigimera.org/api/v1/tokens if logged in).

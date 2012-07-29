@@ -1,0 +1,63 @@
+<script type="text/javascript">
+    function handle_crisis(crisis, title) {
+        document.write("<h1>" + title + "</h1>");
+        for ( var count in crisis ) {
+            var title = crisis[count]['dc_title'];
+            document.write("<h3><a href='" + crisis['_id'] + "'>" + title + "</a></h3>");
+            document.write("<table>");
+            for ( var property in crisis[count] ) {
+                if ( property == 'dc_date'
+                        || property == 'schema_startDate'
+                        || property == 'schema_endDate'
+                   )
+                    var value = crisis[count][property]['$date'];
+                else if ( property == 'foaf_based_near' )
+                    var value = crisis[count][property]['lat'] + ", " + crisis[count][property]['lon']
+                else
+                    var value = crisis[count][property];
+                document.write("<tr>");
+                document.write("<td>" + property + "</td>");
+                document.write("<td>" + value + "</td>");
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        }
+
+    }
+
+    function handle_earthquakes(crisis) {
+        handle_crisis(crisis, "Earthquakes");
+    }
+
+    function handle_cyclones(crisis) {
+        handle_crisis(crisis, "Tropical Cyclones");
+    }
+
+    function handle_floods(crisis) {
+        handle_crisis(crisis, "Floods");
+    }
+
+    function handle_volcanoes(crisis) {
+        handle_crisis(crisis, "Volcanoes");
+    }
+</script>
+
+<script type="text/javascript"
+    src="http://www.sigimera.org/api/v1/crises?auth_token=CHANGEIT&type=earthquakes&callback=handle_earthquake">
+    Please active JavaScript to get earthquakes...
+</script>
+
+<script type="text/javascript"
+    src="http://www.sigimera.org/api/v1/crises?auth_token=CHANGEIT&type=cyclones&callback=handle_cyclone">
+    Please active JavaScript to get tropical cyclones...
+</script>
+
+<script type="text/javascript"
+    src="http://www.sigimera.org/api/v1/crises?auth_token=CHANGEIT&type=floods&callback=handle_floods">
+    Please active JavaScript to get floods...
+</script>
+
+<script type="text/javascript"
+    src="http://www.sigimera.org/api/v1/crises?auth_token=CHANGEIT&type=volcanoes&callback=handle_volcanoes">
+    Please active JavaScript to get floods...
+</script>
