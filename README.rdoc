@@ -1,10 +1,10 @@
 = Sigimera Test Client
 
-Welcome to the Sigimera Test Client Wiki! Here you will find further information how to use the testing application that make use of the Sigimera API (http://www.sigimera.org)
+Here you will find further information how to use the testing application that make use of the Sigimera API (http://www.sigimera.org/api/v11)
 
 == What is Sigimera?
 
-Sigimera is a Crisis Information Platform that combines information from authorities with information from the community. Additional it allows the parties to communicate with each other. This combination makes the platform to a powerful instrument in- and out-side crisis areas.
+Sigimera is a Crises Information Platform that combines information from authorities with information from the community. Additional it allows the parties to communicate with each other. This combination makes the platform to a powerful instrument in- and out-side crisis areas.
 
 == Why should I care?
 
@@ -16,10 +16,9 @@ Dependent on your situation you can find different information. A few examples a
 
 == Why do I should write an application?
 
-In order to help people during and after crisis is important to help them with as much information as possible. You can help other people to help, when you develop an application that allows them to contribute.
+In order to help people during and after crisis is important to help them with much information as possible. You can help other people to help, when you develop an application that allows them to contribute.
 
 == Where do I can find more information about Sigimera?
 
 * The best starting point is to visit http://www.sigimera.org
-* You can find further information in our wiki under http://wiki.sigimera.org
 * If you plan to develop and application that makse use of the REST API provided by the Sigimera Platform you can checkout this project and play around with the examples.
