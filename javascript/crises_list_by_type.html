@@ -3,7 +3,7 @@
         document.write("<h1>" + title + "</h1>");
         for ( var count in crisis ) {
             var title = crisis[count]['dc_title'];
-            document.write("<h3><a href='" + crisis['_id'] + "'>" + title + "</a></h3>");
+            document.write("<h3><a href='http://www.sigimera.org/crises/" + crisis[count]['_id'] + "'>" + title + "</a></h3>");
             document.write("<table>");
             for ( var property in crisis[count] ) {
                 if ( property == 'dc_date'
