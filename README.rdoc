@@ -1,3 +1,5 @@
+= Sigimera Test Client
+
 Welcome to the Sigimera Test Client Wiki! Here you will find further information how to use the testing application that make use of the Sigimera API (http://www.sigimera.org)
 
 == What is Sigimera?
