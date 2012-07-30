@@ -1,0 +1,3 @@
+require './client'
+
+run SigimeraApiClient
