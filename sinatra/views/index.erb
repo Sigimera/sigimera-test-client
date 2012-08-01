@@ -5,19 +5,50 @@
         <meta name="author" content="http://www.sigimera.org">
         <title>Sigimera API - Test Client</title>
     </head>
+
     <body>
-        <h1>Sigimera API - Test Client</h1>
+        <a href="https://github.com/Sigimera/sigimera-test-client/tree/master/sinatra" target="_blank">
+            <img style="position: absolute; top: 40px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub">
+        </a>
+
+        <div class="hero-unit">
+            <h1>Sigimera API - Test Client</h1>
+            <p align="justify">
+            This application is an example client that demonstrates the use of the Sigimera REST API.
+            Please feel free to fork this Sinatra App on
+            <a href="https://github.com/Sigimera/sigimera-test-client/tree/master/sinatra" target="_blank">GitHub</a> and
+            adapt it to your needs.<br/>
+            </p>
+        </div>
+
+        <section>
+        <h2>Getting Started</h2>
+        <dl class="dl-horizontal">
+            <dt><span class="badge badge-info">1. Step</span></dt>
+            <dd>Exploit this website...</dd>
+
+            <dt><span class="badge badge-info">2. Step</span></dt>
+            <dd>Clone (and/or fork) the source code on
+            <a href="https://github.com/Sigimera/sigimera-test-client/tree/master/sinatra" target="_blank">GitHub</a>.</dd>
+
+            <dt><span class="badge badge-info">3. Step</span></dt>
+            <dd>Develop your own app on the base of the <a href="http://www.sigimera.org/api/v1/" target="_blank">Sigimera REST API</a>.</dd>
+        </dl>
+        </section>
+
+        <section>
+        <h2>Source Code Outline</h2>
         <p align="justify">
-        This application runs as heroku instance under
-        <em><a href="http://sigimera-heroku.herokuapp.com/">sigimera-heroku.herokuapp.com</a></em>.
-        It demonstrates the use of the <a href="http://www.sigimera.org/api/v1" target="_blank">Sigimera REST API</a>.
-        The related source code you can find on
-        <a href="https://github.com/Sigimera/sigimera-test-client/tree/master/sinatra">GitHub</a>.
+        The following code snippets describe the important parts of this example code. The other things are only needed
+        to keep this website running and to improve the style.
         </p>
 
-        <hr/>
-        <p align="center">
-            &copy; 2012 <a href="http://www.sigimera.org" target="_blank">Sigimera</a>. All rights reserved.
-        </p>
+<pre class="brush: ruby;">private
+def get_crises_list(page = 1, type = nil, alert_level = nil)
+    # TODO
+end</pre>
+
+        </section>
+
     </body>
 </html>
