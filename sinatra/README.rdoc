@@ -4,6 +4,16 @@ This demonstration client shows the use of the Sigimera API. It could be used
 as starting point for the development of Sigimera Apps written with the help
 of the Sinatra web framework.
 
+== Setup
+
+* Set the ENV['AUTH_TOKEN'] variable to your api authentication token value
+  (see https://www.sigimera.org/users/edit#!tab=developer)
+
+    Local:
+    $ export AUTH_TOKEN=YourAuthTokenValue
+    Heroku:
+    $ heroku config:add AUTH_TOKEN=YourAuthTokenValue
+
 == Resources
 
 * Heroku instance: http://sigimera-heroku.herokuapp.com/

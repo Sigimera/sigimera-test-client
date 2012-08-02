@@ -25,7 +25,7 @@
         <h2>Getting Started</h2>
         <dl class="dl-horizontal">
             <dt><span class="badge badge-info">1. Step</span></dt>
-            <dd>Exploit this website...</dd>
+            <dd>Exploit this website: <a href="/red_alerts">Red Alerts</a></dd>
 
             <dt><span class="badge badge-info">2. Step</span></dt>
             <dd>Clone (and/or fork) the source code on
@@ -43,10 +43,49 @@
         to keep this website running and to improve the style.
         </p>
 
+        <h3>Crises Controller</h3>
+
+<pre class="brush: ruby;">
+get '/red_alerts' do
+    @crises = JSON(get_crises(1, nil, 'red'))
+    erb :red_alerts
+end
+</pre>
+
+        <h3>Crises API Call</h3>
+
 <pre class="brush: ruby;">private
-def get_crises_list(page = 1, type = nil, alert_level = nil)
-    # TODO
-end</pre>
+def get_crises(page = 1, type = nil, alert_level = nil)
+    url = "http://www.sigimera.org/api/v1/crises?auth_token=#{settings.auth_token}&page=#{page}"
+    unless type.nil?
+        url += "&type=#{type}"
+    end
+
+    unless type.nil?
+        url += "&type=#{type}"
+    end
+
+    unless alert_level.nil?
+        url += "&level=#{alert_level}"
+    end
+
+    crises_endpoint = open(url)
+    crises = crises_endpoint.read
+    crises_endpoint.close
+    crises
+end
+</pre>
+
+        <h3>Visualization with erb</h3>
+
+<pre class="brush: ruby;">
+&lt;dl class="dl-horizontal"&gt;
+    &lt;% @crises.each do |crisis| %&gt;
+        &lt;dt&gt;Red &lt;%= crisis['dc_subject'][0] %&gt;&lt;/dt&gt;
+        &lt;dd&gt;&lt;%= crisis['dc_description'] %&gt; - &lt;%= crisis['updated_at'] %&gt;&lt;/dd&gt;
+   &lt;% end %&gt;
+&lt;/dl&gt;
+</pre>
 
         </section>
 
