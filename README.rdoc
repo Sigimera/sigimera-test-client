@@ -1,6 +1,7 @@
 = Sigimera Test Client
 
-Here you will find further information how to use the testing application that make use of the Sigimera API (http://www.sigimera.org/api/v1)
+Here you will find further information how to use the testing application that
+make use of the Sigimera API (http://api.sigimera.org/)
 
 == What is Sigimera?
 
