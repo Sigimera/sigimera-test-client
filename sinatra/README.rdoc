@@ -16,5 +16,5 @@ of the Sinatra web framework.
 
 == Resources
 
-* Heroku instance: http://sigimera-heroku.herokuapp.com/
+* Heroku instance: http://sigimera-client.herokuapp.com/
 * Source code: https://github.com/Sigimera/sigimera-test-client/tree/master/sinatra
