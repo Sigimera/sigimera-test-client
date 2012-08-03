@@ -1,0 +1,24 @@
+<h1>Last <%= @crises.size %> crises</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Subject</th>
+            <th width="195px">Updated At</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @crises.each do |crisis| %>
+            <tr>
+                <td>
+                    <a href="http://www.sigimera.org/crises/<%=crisis['_id']%>" target="_blank" alt="Single Crisis">
+                        <%= crisis['dc_title'] %>
+                    </a>
+                </td>
+                <td><%= crisis['dc_subject'] %></td>
+                <td><%= crisis['updated_at'] %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

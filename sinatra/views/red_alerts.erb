@@ -1,8 +1,0 @@
-<h1>Crises with status red alert</h1>
-
-<dl class="dl-horizontal">
-<% @crises.each do |crisis| %>
-    <dt>Red <%= crisis['dc_subject'][0] %></dt>
-    <dd><%= crisis['dc_description'] %> - <%= crisis['updated_at'] %></dd>
-<% end %>
-</dl>

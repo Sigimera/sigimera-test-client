@@ -15,14 +15,14 @@ class SigimeraApiClient < Sinatra::Base
         erb :index
     end
 
-    get '/red_alerts' do
-        @crises = JSON(get_crises(1, nil, 'red'))
-        erb :red_alerts
+    get '/crises_list' do
+        @crises = JSON(get_crises)
+        erb :crises_list
     end
 
     private
     def get_crises(page = 1, type = nil, alert_level = nil)
-        url = "http://www.sigimera.org/api/v1/crises?auth_token=#{settings.auth_token}&page=#{page}"
+        url = "http://api.sigimera.org/v1/crises?auth_token=#{settings.auth_token}&page=#{page}"
         unless type.nil?
             url += "&type=#{type}"
         end
