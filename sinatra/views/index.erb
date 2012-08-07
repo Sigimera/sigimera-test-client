@@ -47,8 +47,8 @@
 
 <pre class="brush: ruby;">
 get '/red_alerts' do
-    @crises = JSON(get_crises(1, nil, 'red'))
-    erb :red_alerts
+    @crises = JSON(get_crises)
+    erb :crises_list
 end
 </pre>
 
