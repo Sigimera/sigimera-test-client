@@ -56,7 +56,7 @@ end
 
 <pre class="brush: ruby;">private
 def get_crises(page = 1, type = nil, alert_level = nil)
-    url = "http://api.sigimera.org/v1/crises?auth_token=#{settings.auth_token}&page=#{page}"
+    url = "http://api.sigimera.org/v1/crises?auth_token=#{settings.auth_token}&page=#{page}&output=short"
     unless type.nil?
         url += "&type=#{type}"
     end
@@ -86,7 +86,7 @@ end
         &lt;tr&gt;
             &lt;th&gt;Title&lt;/th&gt;
             &lt;th&gt;Subject&lt;/th&gt;
-            &lt;th width="195px"&gt;Updated At&lt;/th&gt;
+            &lt;th width="195px"&gt;Countries&lt;/th&gt;
         &lt;/tr&gt;
     &lt;/thead&gt;
     &lt;tbody&gt;
@@ -98,7 +98,7 @@ end
                     &lt;/a&gt;
                 &lt;/td&gt;
                 &lt;td&gt;&lt;%= crisis['dc_subject'] %&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;%= crisis['updated_at'] %&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;%= crisis['gn_parentCountry'] %&gt;&lt;/td&gt;
             &lt;/tr&gt;
         &lt;% end %&gt;
     &lt;/tbody&gt;
