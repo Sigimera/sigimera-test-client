@@ -22,7 +22,7 @@ class SigimeraApiClient < Sinatra::Base
 
     private
     def get_crises(page = 1, type = nil, alert_level = nil)
-        url = "http://api.sigimera.org/v1/crises?auth_token=#{settings.auth_token}&page=#{page}"
+        url = "http://api.sigimera.org/v1/crises?auth_token=#{settings.auth_token}&page=#{page}&output=short"
         unless type.nil?
             url += "&type=#{type}"
         end

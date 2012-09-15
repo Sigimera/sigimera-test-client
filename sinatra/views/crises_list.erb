@@ -5,7 +5,7 @@
         <tr>
             <th>Title</th>
             <th>Subject</th>
-            <th width="195px">Updated At</th>
+            <th width="195px">Country</th>
         </tr>
     </thead>
     <tbody>
@@ -16,8 +16,8 @@
                         <%= crisis['dc_title'] %>
                     </a>
                 </td>
-                <td><%= crisis['dc_subject'] %></td>
-                <td><%= crisis['updated_at'] %></td>
+                <td><%= crisis['subject'] %></td>
+                <td><%= crisis['gn_parentCountry'] %></td>
             </tr>
         <% end %>
     </tbody>
