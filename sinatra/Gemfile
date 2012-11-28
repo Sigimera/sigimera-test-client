@@ -1,3 +1,7 @@
 source :rubygems
 gem 'sinatra'
+gem 'json'
 gem 'thin'
+
+# Sigimera REST API client library
+gem 'sigimera'

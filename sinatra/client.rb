@@ -2,7 +2,8 @@ require 'rubygems'
 require 'sinatra/base'
 
 require 'json'
-require 'open-uri'
+
+require 'sigimera'
 
 class SigimeraApiClient < Sinatra::Base
     configure do
@@ -16,29 +17,19 @@ class SigimeraApiClient < Sinatra::Base
     end
 
     get '/crises_list' do
-        @crises = JSON(get_crises)
+        @crises = get_crises(1, params[:type], params[:level])
         erb :crises_list
     end
 
     private
     def get_crises(page = 1, type = nil, alert_level = nil)
-        url = "http://api.sigimera.org/v1/crises?auth_token=#{settings.auth_token}&page=#{page}&output=short"
-        unless type.nil?
-            url += "&type=#{type}"
-        end
+        client = Sigimera::Client.new settings.auth_token
 
-        unless type.nil?
-            url += "&type=#{type}"
-        end
+        query = Hash.new
+        query['type'] = type if type
+        query['level'] = alert_level if alert_level
 
-        unless alert_level.nil?
-            url += "&level=#{alert_level}"
-        end
-
-        crises_endpoint = open(url)
-        crises = crises_endpoint.read
-        crises_endpoint.close
-        crises
+        client.get_latest_crises query
     end
 
 end
