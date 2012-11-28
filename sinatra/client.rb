@@ -26,6 +26,7 @@ class SigimeraApiClient < Sinatra::Base
         client = Sigimera::Client.new settings.auth_token
 
         query = Hash.new
+        query['output'] = "short"
         query['type'] = type if type
         query['level'] = alert_level if alert_level
 
