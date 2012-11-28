@@ -22,4 +22,4 @@ In order to help people during and after crisis is important to help them with m
 == Where do I can find more information about Sigimera?
 
 * The best starting point is to visit http://www.sigimera.org
-* If you plan to develop and application that makse use of the REST API provided by the Sigimera Platform you can checkout this project and play around with the examples.
+* If you plan to develop and application that makse use of the REST API (http://api.sigimera.org) provided by the Sigimera Platform you can checkout this project and play around with the examples.
